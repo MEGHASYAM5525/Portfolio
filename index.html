@@ -9,16 +9,16 @@
 <body>
     <header>
         <div class="profile">
-            <img src="MEGHA.jpg">
+            <img src="MEGHA.jpg" alt="Profile Picture">
             <h1 class="syam">MEGHASYAM</h1>
             <div class="details">
                 <ul>
-                    <li class="highlight" id="profile-link">Profile</li>
-                    <li class="highlight" id="resume-link">Resume</li>
-                    <li class="highlight" id="linkedin-link">Linkedin</li>
-                    <li class="highlight" id="github-link">Github</li>
-                    <li class="highlight" id="contact-link">Contact</li>
-                    <li class="highlight" id="projects-link">Projects</li>
+                    <li class="highlight" data-section="profile-section">Profile</li>
+                    <li class="highlight" data-section="resume-section">Resume</li>
+                    <li class="highlight" data-section="linkedin-section">LinkedIn</li>
+                    <li class="highlight" data-section="github-section">GitHub</li>
+                    <li class="highlight" data-section="contact-section">Contact</li>
+                    <li class="highlight" data-section="projects-section">Projects</li>
                 </ul>
             </div>
         </div>
@@ -26,58 +26,93 @@
 
     <div class="content">
         <section id="web-developer-section">
-            <h2 class="section-title">SOFTWARE ENGINEER
-            </h2>
+            <h2 class="section-title">SOFTWARE ENGINEER</h2>
             <div class="section-content">
-                <p>Content related to being a web developer...</p>
+                <p>I am a proactive and optimistic fresher with a foundation in software development, eager to apply and expand my skills within a forward-thinking organization. My experience includes designing and enhancing user interfaces, implementing core features for improved functionality, and engaging in meaningful volunteer work that demonstrates commitment to community impact.</p>
             </div>
         </section>
-        <section id="profile-section" class="hidden">
+
+        <section id="profile-section" class="section hidden">
             <h2 class="section-title">Profile</h2>
             <div class="section-content">
-                <p class="add">
-                    I'm <b>MEGHASYAM</b>, a determined person eager to learn new things and passionate about serving others.
-                    <hr>
-                    Currently, I'm a 3rd-year BTech student majoring in <i>Information Technology</i>. I actively participate in service-related activities and am a member of the <u>Hearts of Humanity</u> club at college. I aspire to succeed and thrive in life.
-                </p>
+                <p>I'm <b>MEGHASYAM</b>, a dedicated and optimistic individual with a strong foundation in software engineering and a commitment to continuous learning. My background includes hands-on experience with frontend development, volunteer work, and leadership roles in community-focused initiatives. I am passionate about leveraging my skills to drive positive change and growth within an organization.</p>
             </div>
         </section>
-        <section id="resume-section" class="hidden">
+
+        <section id="resume-section" class="section hidden">
             <h2 class="section-title">Resume</h2>
             <div class="section-content">
-                <p>Your resume content goes here...</p>
+                <p>You can download my resume below:</p>
+                <a href="resume.pdf" download class="download-button">Download Resume</a>
+                <button class="preview-button" id="preview-btn">Preview Resume</button>
             </div>
         </section>
-        <section id="linkedin-section" class="hidden">
-            <h2 class="section-title">Linkedin</h2>
+        <!-- Modal for Resume Preview -->
+        <div id="resumePreviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closePreviewBtn">&times;</span>
+                <iframe id="resumeIframe" src="resume.pdf" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+
+        <section id="linkedin-section" class="section hidden">
+            <h2 class="section-title">LinkedIn</h2>
             <div class="section-content">
-                <p>Your LinkedIn profile link goes here...</p>
+                <p>Connect with me on <a href="https://www.linkedin.com/in/meghasyam-kamasamudram-103a6722b/" target="_blank">LinkedIn</a>.</p>
             </div>
         </section>
-        <section id="github-section" class="hidden">
-            <h2 class="section-title">Github</h2>
+
+        <section id="github-section" class="section hidden">
+            <h2 class="section-title">GitHub</h2>
             <div class="section-content">
-                <p>Your GitHub profile link goes here...</p>
+                <p>Explore my projects on <a href="https://github.com/MEGHASYAM5525" target="_blank">GitHub</a>.</p>
             </div>
         </section>
-        <section id="contact-section" class="hidden">
+
+        <section id="contact-section" class="section hidden">
             <h2 class="section-title">Contact</h2>
             <div class="section-content">
-                <p>Email: meghasyam.kamasamudram@gmail.com</p>
-                <p>Phone: +91 8179553609</p>
-                <p>Address: Hyderabad, Telangana</p>
+                <div class="contact-item">
+                    <div class="contact-label-block">Email</div>
+                    <div class="contact-info-block">meghasyam.kamasamudram@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label-block">Phone</div>
+                    <div class="contact-info-block">+91 8179553609</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label-block">Address</div>
+                    <div class="contact-info-block">Hyderabad, Telangana</div>
+                </div>
             </div>
-        </section>
-        <section id="projects-section" class="hidden">
+        </section>        
+        
+
+        <section id="projects-section" class="section hidden">
             <h2 class="section-title">Projects</h2>
             <div class="section-content">
-                <ul>
-                    <li>Amazon clone</li>
-                    <li>Snake game using Python Turtle</li>
-                </ul>
+                <div class="project-item">
+                    <div class="project-title">Heart Disease Prediction</div>
+                    <div class="project-details hidden">
+                        <p>The Project will predict whether a person is having heart disease or not based on some of the factors. This is achieved with the simple ML Algorithms. We input the details to the model to predict whether the person is having a healthy heart or not.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">TO DO LIST</div>
+                    <div class="project-details hidden">
+                        <p>Developed a website using HTML and CSS for frontend and JavaScript for backend, allowing users to create, mark, and delete tasks easily</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Portfolio</div>
+                    <div class="project-details hidden">
+                        <p>This portfolio showcases a selection of my best work, highlighting my skills and experience in [mention key areas, e.g., design, software development, marketing]. It includes detailed examples of projects where I applied my expertise to solve problems and deliver impactful results. Each project demonstrates my ability to innovate and achieve outcomes effectively.</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </section>        
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
